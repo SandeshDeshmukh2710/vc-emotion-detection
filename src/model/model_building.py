@@ -65,7 +65,7 @@ def save_model(model: GradientBoostingClassifier, model_path: str) -> None:
 def main():
     params = load_params('params.yaml')
 
-    train_data = read_data('./data/features/train_bow.csv')
+    train_data = read_data('./data/features/train_tfidf.csv')
 
     X_train = train_data.iloc[:, 0:-1].values
     y_train = train_data.iloc[:, -1].values
